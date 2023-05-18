@@ -39,6 +39,7 @@ router.get('/apply', async (req, res) => {
 });
 
 router.get('/order', async (req, res) => {
+  console.log("I AM THE USER_ID", req.session.user_id)
   try {
     // Pass serialized data and session flag into template
     res.render('order', {
@@ -49,26 +50,26 @@ router.get('/order', async (req, res) => {
   }
 });
 
-router.get('/deliverymethod', async (req, res) => {
-  try {
-    // Pass serialized data and session flag into template
-    res.render('deliverymethod', {
-      logged_in: req.session.logged_in,
-    });
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
+// router.get('/deliverymethod', async (req, res) => {
+//   try {
+//     // Pass serialized data and session flag into template
+//     res.render('deliverymethod', {
+//       logged_in: req.session.logged_in,
+//     });
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
 
-router.get('/deliverymethod', (req, res) => {
-  //If the user is already logged in, redirect the request to another route
-  if (req.session.logged_in) {
-    res.redirect('/order');
-    return;
-  }
+// router.get('/deliverymethod', (req, res) => {
+//   //If the user is already logged in, redirect the request to another route
+//   if (req.session.logged_in) {
+//     res.redirect('/order');
+//     return;
+//   }
 
-  res.render('deliverymethod');
-});
+  // res.render('deliverymethod');
+// });
 
 // router.get('/project/:id', async (req, res) => {
 //   try {
