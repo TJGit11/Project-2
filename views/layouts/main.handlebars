@@ -4,80 +4,69 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
   <title>Pete's uh, place</title>
-  <!-- Compiled and minified CSS -->
-=======
-  <title>Pete's Uh...Place</title>
-  {{!-- <link rel="stylesheet" href="/css/jass.css"> --}}
+  {{!--
+  <link rel="stylesheet" href="/css/jass.css"> --}}
   <link rel="stylesheet" href="/css/style.css">
->>>>>>> 4e89c9798992e8ea90d7145190d1ae7dc8f30e74
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-  <script  src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
 </head>
 
 <body>
- 
-
-<nav>
-  <div class="nav-wrapper">
-    <a href="#" class="brand-logo center">🍕Pete's Uh... Place</a>
-    <ul id="nav-mobile" class="left hide-on-med-and-down">
-      <li><a href="/apply">Apply</a></li>
-      <li><a href="/locations">Locations</a></li>
-      <li><a href="/login">Order</a></li>
-    </ul>
-    <span id="phone">Call: 555-555-555</span>
-  </div>
-</nav>
 
 
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo center">🍕Pete's Uh... Place</a>
+      <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <li><a href="/apply">Apply</a></li>
+        <li><a href="/locations">Locations</a></li>
+        <li><a href="/login">Order</a></li>
+      </ul>
+      <span id="phone">Call: 555-555-555</span>
+    </div>
+  </nav>
 
 
 
 
 
-    <header class="display-flex justify-space-between align-center p-2">
-<<<<<<< HEAD
-      <h1>
-        <span role="img" aria-label="money">💸</span>
-        <a href="/">Pete's uh, place</a>
-      </h1>
-      <nav>
-=======
->>>>>>> 4e89c9798992e8ea90d7145190d1ae7dc8f30e74
-        <!-- Conditionally render login or logout links -->
-        {{#if logged_in}}
-        <a href="/profile">profile</a> |
-        <button class="no-button" id="logout">logout</button>
-        {{else}}
-        <a href="/login">login</a>
-        {{/if}}
-      </nav>
-    </header>
+
+
+  <header class="display-flex justify-space-between align-center p-2">
+    <!-- Conditionally render login or logout links -->
+    {{#if logged_in}}
+    <a href="/profile">profile</a> |
+    <button class="no-button" id="logout">logout</button>
+    {{else}}
+    <a href="/login">login</a>
+    {{/if}}
+    </nav>
+  </header>
 
 
 
 
-    <main class="container container-fluid mt-5">
-      <!-- Render the sub layout -->
-      {{{ body }}}
-    </main>
+  <main class="container container-fluid mt-5">
+    <!-- Render the sub layout -->
+    {{{ body }}}
+  </main>
 
-    <footer>
+  <footer>
 
-    </footer>
+  </footer>
   </div>
 
   <!-- Render script for logged in users only -->
   {{#if logged_in}}
   <script src="/js/logout.js"></script>
-  
+
   {{/if}}
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
 
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
 </html>
