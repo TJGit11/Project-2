@@ -1,5 +1,6 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
+const User = require('./User');
 
 class Order extends Model { }
 
@@ -19,6 +20,12 @@ Order.init(
       allowNull: false,
       validate: {
         isNumeric: true,
+      },
+    },
+    user_id: {
+      references: {
+        model: "user",
+        key: "id",
       },
     },
   },
