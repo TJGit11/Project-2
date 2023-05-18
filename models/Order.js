@@ -1,7 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Order extends Model {}
+class Order extends Model { }
 
 Order.init(
   {
@@ -11,11 +11,7 @@ Order.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    name: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    order_description: {
+    description: {
       type: DataTypes.STRING,
     },
     phone_number: {
