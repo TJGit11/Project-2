@@ -19,7 +19,7 @@ router.get('/', async (req, res) => {
 
     // Pass serialized data and session flag into template
     res.render('homepage', {
-    
+
       logged_in: req.session.logged_in,
     });
   } catch (err) {
@@ -50,16 +50,27 @@ router.get('/order', async (req, res) => {
   }
 });
 
-// router.get('/deliverymethod', async (req, res) => {
-//   try {
-//     // Pass serialized data and session flag into template
-//     res.render('deliverymethod', {
-//       logged_in: req.session.logged_in,
-//     });
-//   } catch (err) {
-//     res.status(500).json(err);
-//   }
-// });
+router.get('/checkout', async (req, res) => {
+  try {
+    // Pass serialized data and session flag into template
+    res.render('checkout', {
+      logged_in: req.session.logged_in
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.get('/deliverymethod', async (req, res) => {
+  try {
+    // Pass serialized data and session flag into template
+    res.render('deliverymethod', {
+      logged_in: req.session.logged_in
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 // router.get('/deliverymethod', (req, res) => {
 //   //If the user is already logged in, redirect the request to another route
@@ -68,7 +79,7 @@ router.get('/order', async (req, res) => {
 //     return;
 //   }
 
-  // res.render('deliverymethod');
+// res.render('deliverymethod');
 // });
 
 // router.get('/project/:id', async (req, res) => {
