@@ -1,29 +1,22 @@
 [
-{
-    "name": "Mike",
-    "order_description": "Pepperoni with cheese",
-    "phone_number": "555-555-5555"
-},
-
-{
-    "name": "Jeffrey",
-    "order_description": "Meatlovers",
-    "phone_number": "555-555-5555"
-},
-{
-    "name": "DeShaun",
-    "order_description": "Veggie",
-    "phone_number": "555-555-5555"
-},
-{
-    "name": "Tiny",
-    "order_description": "Meatlovers",
-    "phone_number": "555-555-5555"
-},
-{
-    "name": "Elroy",
-    "order_description": "Cheese",
-    "phone_number": "555-555-5555"
-}
-
+    {
+        "order_description": "Pepperoni with cheese",
+        "phone_number": "555-555-5555"
+    },
+    {
+        "order_description": "Meat lovers",
+        "phone_number": "555-555-5555"
+    },
+    {
+        "order_description": "Veggie",
+        "phone_number": "555-555-5555"
+    },
+    {
+        "order_description": "Meat lovers",
+        "phone_number": "555-555-5555"
+    },
+    {
+        "order_description": "Cheese",
+        "phone_number": "555-555-5555"
+    }
 ]
