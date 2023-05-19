@@ -18,9 +18,6 @@ Order.init(
     phone_number: {
       type: DataTypes.STRING,
       allowNull: false,
-      validate: {
-        isNumeric: true,
-      },
     },
     user_id: {
       type: DataTypes.INTEGER,
