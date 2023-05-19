@@ -12,7 +12,7 @@ Order.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    description: {
+    order_description: {
       type: DataTypes.STRING,
     },
     phone_number: {
