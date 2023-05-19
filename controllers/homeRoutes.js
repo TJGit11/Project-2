@@ -38,11 +38,24 @@ router.get('/apply', async (req, res) => {
   }
 });
 
+
 router.get('/order', async (req, res) => {
   try {
     // Pass serialized data and session flag into template
     res.render('order', {
       logged_in: req.session.logged_in
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.get('/locations', async (req, res) => {
+  try {
+    // Pass serialized data and session flag into template
+    const locations= ["uptown" ,"downtown", "middletown" ]
+    res.render('locations', {
+      locations, title:"locations"
     });
   } catch (err) {
     res.status(500).json(err);

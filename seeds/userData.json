@@ -2,26 +2,31 @@
   {
     "email": "example@test.com",
     "first_name": "Hingle",
-    "last_name": "McCringleberry"
+    "last_name": "McCringleberry",
+    "password": "12345"
   },
   {
     "email": "abcdef@gmail.com",
     "first_name": "Silly",
-    "last_name": "Billy"
+    "last_name": "Billy",
+    "password": "12345"
   },
   {
     "email": "richgirl@example.com",
     "first_name": "North",
-    "last_name": "West"
+    "last_name": "West",
+    "password": "12345"
   },
   {
     "email": "paramour@farmersonly.com",
     "first_name": "Suzie",
-    "last_name": "Mae"
+    "last_name": "Mae",
+    "password": "12345"
   },
   {
     "email": "heavenlyAngel@test.com",
     "first_name": "Harambe",
-    "last_name": "Kong"
+    "last_name": "Kong",
+    "password": "12345"
   }
 ]

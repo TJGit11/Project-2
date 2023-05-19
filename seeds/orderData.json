@@ -1,22 +1,22 @@
 [
     {
-        "order_description": "Pepperoni with cheese",
+        "description": "Pepperoni with cheese",
         "phone_number": "555-555-5555"
     },
     {
-        "order_description": "Meat lovers",
+        "description": "Meat lovers",
         "phone_number": "555-555-5555"
     },
     {
-        "order_description": "Veggie",
+        "description": "Veggie",
         "phone_number": "555-555-5555"
     },
     {
-        "order_description": "Meat lovers",
+        "description": "Meat lovers",
         "phone_number": "555-555-5555"
     },
     {
-        "order_description": "Cheese",
+        "description": "Cheese",
         "phone_number": "555-555-5555"
     }
 ]
