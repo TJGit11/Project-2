@@ -1,7 +1,6 @@
-const router = require('express').Router();
-
+const router = require("express").Router();
 const { Order } = require("../../models");
-
+const withAuth = require("../../utils/auth")
 router.post('/order', withAuth, async (req, res) => {
     try {
         const newOrder = await Order.create({
@@ -14,3 +13,5 @@ router.post('/order', withAuth, async (req, res) => {
         res.status(400).json(err);
     }
 });
+
+module.exports = router
