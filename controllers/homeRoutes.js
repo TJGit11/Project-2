@@ -49,6 +49,17 @@ router.get('/order', async (req, res) => {
   }
 });
 
+router.get('/checkout', async (req, res) => {
+  try {
+    // Pass serialized data and session flag into template
+    res.render('checkout', {
+      logged_in: req.session.logged_in
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 router.get('/deliverymethod', async (req, res) => {
   try {
     // Pass serialized data and session flag into template
@@ -93,7 +104,7 @@ router.get('/project/:id', async (req, res) => {
 });
 
 // Use withAuth middleware to prevent access to route
-router.get('/profile', withAuth, async (req, res) => {
+router.get('/profile', async (req, res) => {
   try {
     // Find the logged in user based on the session ID
     const userData = await User.findByPk(req.session.user_id, {
