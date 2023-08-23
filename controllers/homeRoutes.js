@@ -19,12 +19,18 @@ router.get('/', async (req, res) => {
 
     // Pass serialized data and session flag into template
     res.render('homepage', {
-
       logged_in: req.session.logged_in,
     });
   } catch (err) {
     res.status(500).json(err);
   }
+});
+
+router.get('/', (req, res) => {
+  const context = {
+    imageURL: '/images/pexels-photo-1566837.jpg', // Replace with the actual image URL
+  };
+  res.render('template', context);
 });
 
 router.get('/apply', async (req, res) => {
@@ -38,26 +44,25 @@ router.get('/apply', async (req, res) => {
   }
 });
 
-
 router.get('/order', async (req, res) => {
-  console.log("I AM THE USER_ID", req.session.user_id)
+  console.log('I AM THE USER_ID', req.session.user_id);
   try {
     // Pass serialized data and session flag into template
     res.render('order', {
-      logged_in: req.session.logged_in
+      logged_in: req.session.logged_in,
     });
   } catch (err) {
     res.status(500).json(err);
   }
 });
 
-
 router.get('/locations', async (req, res) => {
   try {
     // Pass serialized data and session flag into template
-    const locations= ["uptown" ,"downtown", "middletown" ]
+    const locations = ['uptown', 'downtown', 'middletown'];
     res.render('locations', {
-      locations, title:"locations"
+      locations,
+      title: 'locations',
     });
   } catch (err) {
     res.status(500).json(err);
@@ -68,7 +73,7 @@ router.get('/checkout', async (req, res) => {
   try {
     // Pass serialized data and session flag into template
     res.render('checkout', {
-      logged_in: req.session.logged_in
+      logged_in: req.session.logged_in,
     });
   } catch (err) {
     res.status(500).json(err);
@@ -79,7 +84,7 @@ router.get('/deliverymethod', async (req, res) => {
   try {
     // Pass serialized data and session flag into template
     res.render('deliverymethod', {
-      logged_in: req.session.logged_in
+      logged_in: req.session.logged_in,
     });
   } catch (err) {
     res.status(500).json(err);
